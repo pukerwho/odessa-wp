@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  h1 {
+    @apply text-3xl lg:text-5xl font-black;
+  }
+  p {
+    @apply mb-2;
+  }
+  p:last-of-type {
+    @apply mb-0;
+  }
+  .container {
+    @apply mx-auto px-2 lg:px-20;
+  }
+  .page-padding {
+    @apply pt-32 lg:pt-36;
+  }
+  .number-iterator {
+    @apply w-[20px] h-[20px] text-sm text-white flex justify-center items-center bg-gray-800 rounded-full mr-2;
+  }
+  .absolute-link {
+    @apply w-full h-full absolute left-0 top-0 z-2;
+  }
+  .h-line {
+    @apply w-full h-[2px] absolute top-[11px] bg-blue-700;
+  }
+  .custom-btn-dark {
+    @apply bg-gray-800 text-white text-center rounded-xl px-4 py-2;
+  }
+  .custom-shadow {
+    -webkit-box-shadow: 0px 19px 38px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 19px 38px 0px rgba(0, 0, 0, 0.1);
+  }
+}

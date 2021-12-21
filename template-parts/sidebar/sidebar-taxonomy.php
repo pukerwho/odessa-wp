@@ -1,0 +1,1 @@
+sidebar-taxonomy.php

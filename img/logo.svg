@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.718 13.044">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 12px;
+        fill: #1f2937;
+        font-family: MyriadPro-Bold, Myriad Pro;
+        letter-spacing: -0.004em;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        font-weight: 700;
+      }
+
+      .cls-3 {
+        letter-spacing: -0.032em;
+      }
+
+      .cls-4, .cls-5, .cls-6 {
+        letter-spacing: -0.004em;
+      }
+
+      .cls-5, .cls-6, .cls-7, .cls-8 {
+        font-family: MyriadPro-Regular, Myriad Pro;
+      }
+
+      .cls-6, .cls-7, .cls-8 {
+        opacity: 0.75;
+      }
+
+      .cls-7 {
+        letter-spacing: 0.013em;
+      }
+
+      .cls-8 {
+        letter-spacing: -0.009em;
+      }
+
+      .cls-9 {
+        fill: #1d4ed8;
+      }
+    </style>
+  </defs>
+  <title>hotels-odessa-logo</title>
+  <g id="Шар_2" data-name="Шар 2">
+    <g id="Шар_1-2" data-name="Шар 1">
+      <text class="cls-1" transform="translate(0 10.044)"><tspan class="cls-2">H</tspan><tspan class="cls-3" x="8.22" y="0">O</tspan><tspan class="cls-4" x="16.44" y="0">TELS</tspan><tspan class="cls-5" x="41.843" y="0" xml:space="preserve">   </tspan><tspan class="cls-6" x="49.331" y="0">U</tspan><tspan class="cls-7" x="57.047" y="0">k</tspan><tspan class="cls-8" x="62.831" y="0">r</tspan><tspan class="cls-6" x="66.647" y="0">aine</tspan></text>
+      <rect class="cls-9" x="45.642" y="2.058" width="0.533" height="8"/>
+    </g>
+  </g>
+</svg>
