@@ -41,7 +41,7 @@
             ),
           ) );
         if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
-          <div class="w-full lg:w-3/12 px-0 lg:px-2 mb-6">
+          <div class="px-0 lg:px-2 mb-6">
             <?php get_template_part('template-parts/hotels/hotel-card'); ?>
           </div>
         <?php endwhile; endif; wp_reset_postdata(); ?>
