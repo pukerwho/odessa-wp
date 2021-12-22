@@ -30,7 +30,7 @@
     </div>
     <div class="flex flex-col lg:items-end text-sm text-gray-700 opacity-95 mb-4 lg:mb-0">
       <div>
-        <?php _e('Рейтинг', 'odessa'); ?>: <span class="font-semibold"><?php echo carbon_get_post_meta('crb_hotels_rating'); ?></span>
+        <?php _e('Рейтинг', 'odessa'); ?>: <span class="font-semibold"><?php echo carbon_get_the_post_meta('crb_hotels_rating'); ?></span>
       </div>
       <div>
         <?php _e('Просмотров', 'odessa'); ?>: <span class="font-semibold"><?php echo get_post_meta( get_the_ID(), 'place_count', true ); ?></span>
