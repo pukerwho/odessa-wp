@@ -700,6 +700,15 @@ p:last-of-type {
     -webkit-box-shadow: 0px 19px 38px 0px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 19px 38px 0px rgba(0, 0, 0, 0.1);
   }
+.lang {
+	margin-left: -0.5rem;
+	margin-right: -0.5rem;
+}
+.lang li {
+	list-style-type: none;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
 .visible {
 	visibility: visible;
 }
@@ -1195,6 +1204,14 @@ p:last-of-type {
 
 	.lg\:block {
 		display: block;
+	}
+
+	.lg\:flex {
+		display: flex;
+	}
+
+	.lg\:hidden {
+		display: none;
 	}
 
 	.lg\:h-full {

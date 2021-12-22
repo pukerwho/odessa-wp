@@ -71,14 +71,14 @@ if ( is_singular( 'places' ) ) {
 					</div>
 					<div>
 						<!-- Переключатель языка -->
-						<div class="hidden lg:block lang">
+						<div class="hidden lg:flex lang">
 	            <?php if (function_exists('pll_the_languages')) { 
 	              pll_the_languages(); 
 	            } ?>
 						</div>
 						<!-- END Переключатель языка -->
 						<!-- Гамбургер -->
-						<div class="hamburger-toggle relative -mt-2">
+						<div class="hamburger-toggle relative block lg:hidden -mt-2">
 							<span class="w-7 h-0.5 absolute bg-gray-600 top-0 right-0"></span>
 							<span class="w-7 h-0.5 absolute bg-gray-600 top-2 right-0"></span>
 							<span class="w-7 h-0.5 absolute bg-gray-600 top-4 right-0"></span>
