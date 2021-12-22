@@ -21,7 +21,7 @@
           </a>
         </div>
         <div class="w-full lg:w-3/4 opacity-75">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quos ipsa sunt quo id consequatur voluptatem doloremque aut eveniet fugit.
+          <?php _e('Данный сайт является информационной площадкой - мы не бронируем номера и не сдаем жилье. Мы следим, чтобы на сайте была только актуальная и правдивая информация, но иногда мы можем что-то упустить. Поэтому будем рады помощи с вашей стороны.', 'odessa'); ?>
         </div>
       </div>
       <div class="w-full lg:w-1/5 lg:px-4 mb-4 lg:mb-0">

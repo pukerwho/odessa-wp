@@ -10,7 +10,7 @@
   <div class="container">
     <div class="welcome w-full h-48 relative mb-10">
       <div class="w-full h-48">
-        <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="<?php single_term_title(); ?>" class="w-full h-full object-cover rounded-xl">
+        <img src="<?php echo carbon_get_term_meta($getCurrentTermId, 'crb_city_img' ); ?>" alt="<?php single_term_title(); ?>" class="w-full h-full object-cover rounded-xl">
       </div>
       <div class="w-full h-full absolute top-0 left-0 bg-gradient-to-b from-gray-800 to-transparent rounded-xl"></div>
       <div class="w-full h-full flex flex-col justify-center items-center absolute top-0 left-0 text-white z-1 ">
