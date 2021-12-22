@@ -44,6 +44,10 @@
   </div>
 </footer>
 
+<!-- not use -->
+<div class="current-lang"></div>
+<!-- END not use -->
+
 <?php wp_footer(); ?>
 
 </body>

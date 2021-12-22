@@ -40,7 +40,7 @@
   .lang li {
     @apply list-none px-2;
   }
-  .current-lang a {
+  .current-lang {
     @apply text-blue-700;
   }
 }

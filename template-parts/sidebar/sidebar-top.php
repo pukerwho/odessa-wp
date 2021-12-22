@@ -10,7 +10,7 @@
     </div>
   </div>
   <div class="bg-gray-100 rounded-lg p-4 mb-6">
-    <div><?php _e('Отелей в каталоге', 'odessa'); ?>: <span class="font-semibold"><?php $count_posts = wp_count_posts('hotels'); $published_posts = $count_posts->publish; echo $published_posts; ?></span></div>
+    <div><?php _e('Отелей в каталоге', 'odessa'); ?>: <span class="font-semibold"><?php $count_posts = wp_count_posts('hotels'); $published_posts = $count_posts->publish; echo $published_posts/2; ?></span></div>
     <div><?php _e('Последнее объявление', 'odessa'); ?>: <span class="font-semibold"><?php $today = date("d/m/Y"); echo $today; ?></span></div>
   </div>
   <div class="relative overflow-hidden mb-6">

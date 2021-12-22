@@ -709,6 +709,10 @@ p:last-of-type {
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
 }
+.current-lang {
+	--tw-text-opacity: 1;
+	color: rgba(29, 78, 216, var(--tw-text-opacity));
+}
 .visible {
 	visibility: visible;
 }
