@@ -23,7 +23,7 @@
       'hide_empty' => false,
     ));
     shuffle( $sidebar_region_rand );
-    foreach ( array_slice($sidebar_region_rand, 0, 4) as $sidebar_region ): ?>
+    foreach ( array_slice($sidebar_region_rand, 0, 6) as $sidebar_region ): ?>
       <div class="w-1/2 h-40 px-2 mb-4">
         <div class="h-full relative overflow-x-hidden rounded-lg">
           <a href="<?php echo get_term_link($sidebar_region); ?>" class="absolute-link"></a>
