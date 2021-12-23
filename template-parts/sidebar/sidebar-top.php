@@ -57,4 +57,28 @@
       </ol>
     </div>
   </div>
+  <div class="mb-6">
+    <div class="relative overflow-hidden mb-6">
+      <h2 class="inline-block relative bg-white uppercase font-bold z-1 pr-2">🔝 <?php _e('Самые лучшие отели', 'odessa'); ?></h2>
+      <div class="h-line"></div>
+    </div>
+    <div>
+      <ol>
+        <?php $iterator_popular_query = 1; ?>
+        <?php 
+          $hotels_popular_query = new WP_Query( array( 
+            'post_type' => 'hotels', 
+            'posts_per_page' => 10,
+            'orderby' => 'meta_value_num',
+            'meta_key' => '_crb_hotels_rating',
+            'order' => 'DESC',
+          ) );
+          if ($hotels_popular_query->have_posts()) : while ($hotels_popular_query->have_posts()) : $hotels_popular_query->the_post(); 
+        ?>
+          <li class="mb-4"><a href="<?php the_permalink(); ?>" class="flex items-center text-sm hover:text-red-700"><span class="number-iterator"><?php echo $iterator_popular_query; ?></span><?php the_title(); ?></a></li>
+          <?php $iterator_popular_query = $iterator_popular_query + 1; ?>
+        <?php endwhile; endif; wp_reset_postdata(); ?>
+      </ol>
+    </div>
+  </div>
 </div>

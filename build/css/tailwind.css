@@ -1254,10 +1254,6 @@ p:last-of-type {
 		width: 50%;
 	}
 
-	.lg\:w-3\/12 {
-		width: 25%;
-	}
-
 	.lg\:w-6 {
 		width: 1.5rem;
 	}

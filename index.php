@@ -95,6 +95,7 @@ get_header();
 								$hotels_new_query = new WP_Query( array( 
 									'post_type' => 'hotels', 
 									'posts_per_page' => 6,
+									'offset' => 1,
 								) );
 								if ($hotels_new_query->have_posts()) : while ($hotels_new_query->have_posts()) : $hotels_new_query->the_post(); 
 							?>
@@ -140,7 +141,7 @@ get_header();
 								  'meta_value' => 'karpaty'
 								) );
 							?>
-							<?php foreach ($karpaty_terms as $karpaty_term): ?>
+							<?php foreach (array_slice($karpaty_terms,0,10) as $karpaty_term): ?>
 							<div class="flex mb-2">
 								<div class="mr-2">
 									<img src="<?php echo carbon_get_term_meta($karpaty_term->term_id, 'crb_city_img' ); ?>" alt="" class="w-[40px] h-[40px] object-cover">
@@ -170,7 +171,7 @@ get_header();
 								  'meta_value' => 'blacksea'
 								) );
 							?>
-							<?php foreach ($blacksea_terms as $blacksea_term): ?>
+							<?php foreach (array_slice($blacksea_terms,0,10) as $blacksea_term): ?>
 							<div class="flex mb-2">
 								<div class="mr-2">
 									<img src="<?php echo carbon_get_term_meta($blacksea_term->term_id, 'crb_city_img' ); ?>" alt="" class="w-[40px] h-[40px] object-cover">
@@ -200,7 +201,7 @@ get_header();
 								  'meta_value' => 'azovsea'
 								) );
 							?>
-							<?php foreach ($azovsea_terms as $azovsea_term): ?>
+							<?php foreach (array_slice($azovsea_terms,0,10) as $azovsea_term): ?>
 							<div class="flex mb-2">
 								<div class="mr-2">
 									<img src="<?php echo carbon_get_term_meta($azovsea_term->term_id, 'crb_city_img' ); ?>" alt="" class="w-[40px] h-[40px] object-cover">

@@ -71,7 +71,7 @@ if ( is_singular( 'places' ) ) {
 					</div>
 					<div>
 						<!-- Переключатель языка -->
-						<div class="hidden lg:flex lang">
+						<div class="hidden lg:flex lang text-sm">
 	            <?php if (function_exists('pll_the_languages')) { 
 	              pll_the_languages(); 
 	            } ?>
