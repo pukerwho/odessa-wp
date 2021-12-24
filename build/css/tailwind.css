@@ -707,6 +707,10 @@ p:last-of-type {
 .content li {
 	list-style-type: disc;
 }
+.content a {
+	--tw-text-opacity: 1;
+	color: rgba(29, 78, 216, var(--tw-text-opacity));
+}
 .lang {
 	margin-left: -0.5rem;
 	margin-right: -0.5rem;

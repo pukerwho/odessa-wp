@@ -40,6 +40,9 @@
   .content li {
     @apply list-disc;
   }
+  .content a {
+    @apply text-blue-700;
+  }
   .lang {
     @apply -mx-2;
   }
