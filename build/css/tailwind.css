@@ -700,6 +700,13 @@ p:last-of-type {
     -webkit-box-shadow: 0px 19px 38px 0px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 19px 38px 0px rgba(0, 0, 0, 0.1);
   }
+.content ul {
+	margin-left: 1rem;
+	margin-bottom: 1rem;
+}
+.content li {
+	list-style-type: disc;
+}
 .lang {
 	margin-left: -0.5rem;
 	margin-right: -0.5rem;
