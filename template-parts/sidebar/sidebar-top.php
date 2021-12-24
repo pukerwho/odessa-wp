@@ -36,7 +36,7 @@
       </div>
     <?php endforeach; ?>
   </div>
-  <div class="mb-6">
+  <div class="mb-12">
     <div class="relative overflow-hidden mb-6">
       <h2 class="inline-block relative bg-white uppercase font-bold z-1 pr-2">🔝 <?php _e('Самые популярные отели', 'odessa'); ?></h2>
       <div class="h-line"></div>
