@@ -49,7 +49,7 @@
     'hide_empty' => false,
   ));
   shuffle( $sidebar_cities );
-  foreach ( array_slice($sidebar_cities, 0, 6) as $sidebar_city ): ?>
+  foreach ( $sidebar_cities as $sidebar_city ): ?>
     <li class="bullet bullet-blue">
       <a href="<?php echo get_term_link($sidebar_city); ?>" class="text-gray-800"><?php echo $sidebar_city->name ?></a>
     </li>
