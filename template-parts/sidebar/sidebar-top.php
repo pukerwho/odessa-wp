@@ -13,6 +13,7 @@
     <div><?php _e('Отелей в каталоге', 'odessa'); ?>: <span class="font-semibold"><?php $count_posts = wp_count_posts('hotels'); $published_posts = $count_posts->publish; echo $published_posts/2; ?></span></div>
     <div><?php _e('Последнее объявление', 'odessa'); ?>: <span class="font-semibold"><?php $today = date("d/m/Y"); echo $today; ?></span></div>
   </div>
+  <?php if ( !is_post_type_archive('hotels') ) { ?>
   <div class="relative overflow-hidden mb-6">
     <h2 class="inline-block relative bg-white uppercase font-bold z-1 pr-2">👁️ <?php _e('Сейчас смотрят эти города', 'odessa'); ?></h2>
     <div class="h-line"></div>
@@ -36,6 +37,25 @@
       </div>
     <?php endforeach; ?>
   </div>
+  <?php } ?>
+  <?php if ( is_post_type_archive('hotels') ) { ?>
+  <div class="relative overflow-hidden mb-6">
+    <h2 class="inline-block relative bg-white uppercase font-bold z-1 pr-2">📍 <?php _e('Все курорты', 'odessa'); ?></h2>
+    <div class="h-line"></div>
+  </div>
+  <ul class="ml-6 mb-6">
+  <?php $sidebar_cities = get_terms( array( 
+    'taxonomy' => 'city', 
+    'hide_empty' => false,
+  ));
+  shuffle( $sidebar_cities );
+  foreach ( array_slice($sidebar_cities, 0, 6) as $sidebar_city ): ?>
+    <li class="bullet bullet-blue">
+      <a href="<?php echo get_term_link($sidebar_city); ?>" class="text-gray-800"><?php echo $sidebar_city->name ?></a>
+    </li>
+  <?php endforeach; ?>
+  </ul>
+  <?php } ?>
   <div class="mb-12">
     <div class="relative overflow-hidden mb-6">
       <h2 class="inline-block relative bg-white uppercase font-bold z-1 pr-2">🔝 <?php _e('Самые популярные отели', 'odessa'); ?></h2>
