@@ -4,7 +4,7 @@ $('.hamburger-toggle').on('click', function(){
   $('body').toggleClass('overflow-hidden');
 });
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbzXNLSRGmFWFdoQ15YbDU54-flF-T8F8kobGizvRw/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwF3vB_9iEmE6OoHFOTuZJPKqPsp2uhNwuzC73GzH9rISH-EXKP/exec';
 const order_form = document.forms['form_order'];
 let orderSuccess = document.querySelector('.form_order_success');
 let formOrderButton = document.querySelector('.form_order_button');
