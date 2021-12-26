@@ -121,7 +121,7 @@ get_header();
 				<div class="bg-gray-800 text-white text-center rounded-xl px-4 py-8">
 					<div class="text-2xl font-bold mb-4"><?php _e('Добавьте свой отель прямо сейчас!', 'odessa'); ?></div>
 					<div class="text-xl mb-6">❗<span class="italic opacity-75 "><?php _e('Это абсолютно бесплатно', 'odessa'); ?></span>❗</div>
-					<a href="#" class="inline-block bg-blue-700 rounded-xl px-6 py-2"><?php _e('Добавить отель за 5 минут', 'odessa'); ?></a>
+					<a href="<?php home_url(); ?>/add" class="inline-block bg-blue-700 rounded-xl px-6 py-2"><?php _e('Добавить отель за 5 минут', 'odessa'); ?></a>
 				</div>
 			</div>
 			<!-- END Добавить отель -->
