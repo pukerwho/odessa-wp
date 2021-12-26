@@ -310,33 +310,24 @@ function tutCount($id) {
   
 }
 
-// Создаем скриншот (shortcode)
-add_shortcode( 'snapshot', function ( $atts ) {
-  $atts = shortcode_atts( array(
-    'alt'    => '',
-    'url'    => 'http://www.wordpress.org',
-    'width'  => '400',
-    'height' => '300'
-  ), $atts );
-  $params = array(
-    'w' => $atts['width'],
-    'h' => $atts['height'],
-  );
-  $url = urlencode( $atts['url'] );
-  $src = 'http://s.wordpress.com/mshots/v1/' . $url . '?' . http_build_query( $params, null, '&' );
-
-  $cache_key = 'snapshot_' . md5( $src );
-  $data_uri = get_transient( $cache_key );
-  if ( ! $data_uri ) {
-    $response = wp_remote_get( $src );
-    if ( 200 === wp_remote_retrieve_response_code( $response ) ) {
-      $image_data = wp_remote_retrieve_body( $response );
-      if ( $image_data && is_string( $image_data ) ) {
-        $src = $data_uri = 'data:image/jpeg;base64,' . base64_encode( $image_data );
-        set_transient( $cache_key, $data_uri, DAY_IN_SECONDS );
-      }
+function get_page_url($template_name) {
+  $pages = get_posts([
+    'post_type' => 'page',
+    'post_status' => 'publish',
+    'meta_query' => [
+      [
+        'key' => '_wp_page_template',
+        'value' => $template_name.'.php',
+        'compare' => '='
+      ]
+    ]
+  ]);
+  if(!empty($pages))
+  {
+    foreach($pages as $pages__value)
+    {
+      return get_permalink($pages__value->ID);
     }
   }
-
-  return '<img src="' . esc_attr( $src ) . '" alt="' . esc_attr( $atts['alt'] ) . '" class="w-full h-56 lg:h-full object-cover object-top rounded-lg"/>';
-} );
+  return get_bloginfo('url');
+}

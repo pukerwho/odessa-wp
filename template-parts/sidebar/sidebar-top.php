@@ -6,7 +6,7 @@
   <div class="mb-6">
     <div class="italic opacity-75 mb-3"><?php _e('Вы можете самостоятельно добавить отель на наш сайт', 'odessa'); ?> 👇</div>
     <div>
-      <a href="<?php home_url(); ?>/add" class="w-full block custom-btn-dark"><?php _e('Добавить', 'odessa'); ?></a>
+      <a href="<?php echo get_page_url('templates/add'); ?>" class="w-full block custom-btn-dark"><?php _e('Добавить', 'odessa'); ?></a>
     </div>
   </div>
   <div class="bg-gray-100 rounded-lg p-4 mb-6">
