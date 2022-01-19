@@ -55,4 +55,13 @@
   .current-lang {
     @apply text-blue-700;
   }
+  .pagination {
+    @apply flex justify-center items-center -mx-2;
+  }
+  .pagination .page-numbers {
+    @apply w-10 h-10 bg-gray-100 flex items-center justify-center mx-2;
+  }
+  .pagination .page-numbers.current {
+    @apply text-white bg-blue-500;
+  }
 }

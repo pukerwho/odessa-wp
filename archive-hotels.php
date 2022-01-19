@@ -20,16 +20,32 @@
       <!-- Основной поток -->
       <div class="w-full lg:w-8/12 px-0 lg:px-8">
         <?php 
+          $current_page = !empty( $_GET['page'] ) ? $_GET['page'] : 1;
           $query = new WP_Query( array( 
             'post_type' => 'hotels', 
             'posts_per_page' => 20,
             'order'    => 'DESC',
+            'paged' => $current_page,
           ) );
         if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
           <div class="px-0 lg:px-2 mb-6">
             <?php get_template_part('template-parts/hotels/hotel-card'); ?>
           </div>
         <?php endwhile; endif; wp_reset_postdata(); ?>
+
+        <div class="pagination mb-16 lg:mb-0">
+          <?php 
+            $big = 9999999991; // уникальное число
+            echo paginate_links( array(
+              'format' => '?page=%#%',
+              'total' => $query->max_num_pages,
+              'current' => $current_page,
+              'prev_next' => true,
+              'next_text' => ('>'),
+              'prev_text' => ('<'),
+            )); 
+          ?>
+        </div>
       </div>
       <!-- END Основной поток -->
 

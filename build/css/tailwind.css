@@ -733,6 +733,30 @@ p:last-of-type {
 	--tw-text-opacity: 1;
 	color: rgba(29, 78, 216, var(--tw-text-opacity));
 }
+.pagination {
+	margin-left: -0.5rem;
+	margin-right: -0.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.pagination .page-numbers {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	display: flex;
+	height: 2.5rem;
+	width: 2.5rem;
+	align-items: center;
+	justify-content: center;
+	--tw-bg-opacity: 1;
+	background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+}
+.pagination .page-numbers.current {
+	--tw-bg-opacity: 1;
+	background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
+	--tw-text-opacity: 1;
+	color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
 .visible {
 	visibility: visible;
 }
@@ -883,9 +907,6 @@ p:last-of-type {
 }
 .h-10 {
 	height: 2.5rem;
-}
-.h-56 {
-	height: 14rem;
 }
 .h-6 {
 	height: 1.5rem;
@@ -1045,9 +1066,6 @@ p:last-of-type {
 }
 .object-cover {
 	object-fit: cover;
-}
-.object-top {
-	object-position: top;
 }
 .p-5 {
 	padding: 1.25rem;
@@ -1243,10 +1261,6 @@ p:last-of-type {
 
 	.lg\:hidden {
 		display: none;
-	}
-
-	.lg\:h-full {
-		height: 100%;
 	}
 
 	.lg\:h-6 {
