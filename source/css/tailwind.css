@@ -64,4 +64,28 @@
   .pagination .page-numbers.current {
     @apply text-white bg-blue-500;
   }
+  .hotel-rating tr {
+    width: 100%;
+    min-height: 3em;
+    position: relative;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    vertical-align: top;
+  }
+  .hotel-rating td, .hotel-rating th {
+    width: 50%;
+    padding: 14px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .hotel-rating th {
+    @apply bg-gray-400;
+  }
+  .hotel-rating .rating-row {
+    @apply bg-gray-200 rounded-xl py-2;
+  }
 }

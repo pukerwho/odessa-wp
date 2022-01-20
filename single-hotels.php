@@ -1,6 +1,10 @@
 <?php get_header(); ?>
 
-<?php $countNumber = tutCount(get_the_ID()); ?>
+<?php 
+  $current_id = get_the_ID();
+  $countNumber = tutCount($current_id);
+  getMeta($current_id);
+?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -323,6 +327,111 @@
             <div class="mr-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" /></svg></div>
             <div><?php _e('Обязательно сообщите, что нашли номер телефона на сайте', 'odessa'); ?> <span class="font-semibold">hotelodessa-ukraine.com</span></div>
           </div>
+          <!-- Оценки отдыхающих -->
+          <div>
+            <div class="text-2xl font-semibold mb-4"><?php _e('Оценки отдыхающих', 'odessa'); ?></div>
+            <div class="mb-12">
+              <table class="hotel-rating w-full bg-gray-100  shadow-lg border-b-transparent text-sm lg:text-md">
+                <tbody>
+                  <thead>
+                    <tr>
+                      <th class="border-r border-gray-700"><?php _e('Критерий', 'odessa'); ?></th>
+                      <th><?php _e('Оценка', 'odessa'); ?></th>
+                    </tr>
+                  </thead>
+                  <tr class="border-b border-gray-300">
+                    <td class="key"><span class="mr-2">⭐️</span> <?php _e('Рейтинг отеля', 'odessa'); ?></td>
+                    <td class="value" xitemprop="aggregateRating" xitemscope="" xitemtype="http://schema.org/aggregateRating">
+                      <?php 
+                        $meta_rating_count = 'rating_count_'.$current_id;
+                        $rating_value = carbon_get_the_post_meta('crb_hotels_rating'); 
+                        $rating_value_width = ($rating_value / 5) * 100;
+                      ?>
+                      <div class="rating-row relative font-semibold">
+                        <div class="flex items-center justify-center text-center">
+                          <div class="relative z-1" style="width:<?php echo $rating_value_width; ?>%">
+                            <span xitemprop="ratingValue"><?php echo $rating_value ?> /</span>
+                            <?php _e('Оценок', 'odessa'); ?>: <span xitemprop="reviewCount"><?php echo get_post_meta( $current_id, $meta_rating_count, true ); ?></span>  
+                          </div>
+                          <div class="h-full absolute left-0 top-0 bg-green-300 rounded-xl text-center py-2" style="width:<?php echo $rating_value_width; ?>%"></div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <!-- Оценка ЧИСТОТА -->
+                  <tr class="border-b border-gray-300">
+                    <td class="key"><span class="mr-2">🧹</span> <?php _e('Чистота', 'odessa'); ?></td>
+                    <td class="value">
+                      <?php 
+                        $meta_rating_clean = 'rating_clean_'.$current_id;
+                        $rating_clean_front = get_post_meta( $current_id, $meta_rating_clean, true );
+                        $rating_clean_width = ($rating_clean_front / 5) * 100;
+                      ?>
+                      <div class="rating-row relative font-semibold">
+                        <div class="relative text-center z-1" style="width:<?php echo $rating_clean_width; ?>%"><?php echo $rating_clean_front; ?></div>
+                        <div class="h-full absolute left-0 top-0 bg-green-300 rounded-xl text-center py-2" style="width:<?php echo $rating_clean_width; ?>%"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- END Оценка ЧИСТОТА -->
+
+                  <!-- Оценка ТЕРРИТОРИЯ -->
+                  <tr class="border-b border-gray-300">
+                    <td class="key"><span class="mr-2">🏡</span> <?php _e('Территория', 'odessa'); ?></td>
+                    <td class="value">
+                      <?php 
+                        $meta_rating_territoria = 'rating_territoria_'.$current_id;
+                        $rating_territoria_front = get_post_meta( $current_id, $meta_rating_territoria, true );
+                        $rating_territoria_width = ($rating_territoria_front / 5) * 100;
+                      ?>
+                      <div class="rating-row relative font-semibold">
+                        <div class="relative text-center z-1" style="width:<?php echo $rating_territoria_width; ?>%"><?php echo $rating_territoria_front; ?></div>
+                        <div class="h-full absolute left-0 top-0 bg-green-300 rounded-xl text-center py-2" style="width:<?php echo $rating_territoria_width; ?>%"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- END Оценка ТЕРРИТОРИЯ -->
+
+                  <!-- Оценка ПЕРСОНАЛ -->
+                  <tr class="border-b border-gray-300">
+                    <td class="key"><span class="mr-2">💁‍♀️</span> <?php _e('Персонал', 'odessa'); ?></td>
+                    <td class="value">
+                      <?php 
+                        $meta_rating_personal = 'rating_personal_'.$current_id;
+                        $rating_personal_front = get_post_meta( $current_id, $meta_rating_personal, true );
+                        $rating_personal_width = ($rating_personal_front / 5) * 100;
+                      ?>
+                      <div class="rating-row relative font-semibold">
+                        <div class="relative text-center z-1" style="width:<?php echo $rating_personal_width; ?>%"><?php echo $rating_personal_front; ?></div>
+                        <div class="h-full absolute left-0 top-0 bg-green-300 rounded-xl text-center py-2" style="width:<?php echo $rating_personal_width; ?>%"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- END Оценка ПЕРСОНАЛ -->
+
+                  <!-- Оценка СТОИМОСТЬ -->
+                  <tr>
+                    <td class="key"><span class="mr-2">💸</span> <?php _e('Соотношение цена/качество', 'odessa'); ?></td>
+                    <td class="value">
+                      <?php 
+                        $meta_rating_price = 'rating_price_'.$current_id;
+                        $rating_price_front = get_post_meta( $current_id, $meta_rating_price, true );
+                        $rating_price_width = ($rating_price_front / 5) * 100;
+                      ?>
+                      <div class="rating-row relative font-semibold">
+                        <div class="relative text-center z-1" style="width:<?php echo $rating_price_width; ?>%"><?php echo $rating_price_front; ?></div>
+                        <div class="h-full absolute left-0 top-0 bg-green-300 rounded-xl text-center py-2" style="width:<?php echo $rating_price_width; ?>%"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- END Оценка СТОИМОСТЬ -->
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- END Оценки отдыхающих -->
           <!-- Комментарии -->
           <div class="mb-10 pb-10">
             <div class="relative overflow-hidden mb-6">

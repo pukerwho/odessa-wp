@@ -757,6 +757,35 @@ p:last-of-type {
 	--tw-text-opacity: 1;
 	color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
+.hotel-rating tr {
+    width: 100%;
+    min-height: 3em;
+    position: relative;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    vertical-align: top;
+  }
+.hotel-rating td, .hotel-rating th {
+    width: 50%;
+    padding: 14px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+.hotel-rating th {
+	--tw-bg-opacity: 1;
+	background-color: rgba(156, 163, 175, var(--tw-bg-opacity));
+}
+.hotel-rating .rating-row {
+	border-radius: 0.75rem;
+	--tw-bg-opacity: 1;
+	background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
 .visible {
 	visibility: visible;
 }
@@ -839,6 +868,9 @@ p:last-of-type {
 .mb-12 {
 	margin-bottom: 3rem;
 }
+.mb-16 {
+	margin-bottom: 4rem;
+}
 .mb-1 {
 	margin-bottom: 0.25rem;
 }
@@ -856,9 +888,6 @@ p:last-of-type {
 }
 .mr-2 {
 	margin-right: 0.5rem;
-}
-.mb-16 {
-	margin-bottom: 4rem;
 }
 .mr-8 {
 	margin-right: 2rem;
@@ -1004,6 +1033,9 @@ p:last-of-type {
 .border-b-2 {
 	border-bottom-width: 2px;
 }
+.border-r {
+	border-right-width: 1px;
+}
 .border-b {
 	border-bottom-width: 1px;
 }
@@ -1015,9 +1047,16 @@ p:last-of-type {
 	--tw-border-opacity: 1;
 	border-color: rgba(209, 213, 219, var(--tw-border-opacity));
 }
+.border-gray-700 {
+	--tw-border-opacity: 1;
+	border-color: rgba(55, 65, 81, var(--tw-border-opacity));
+}
 .border-gray-200 {
 	--tw-border-opacity: 1;
 	border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+}
+.border-b-transparent {
+	border-bottom-color: transparent;
 }
 .bg-gray-100 {
 	--tw-bg-opacity: 1;
@@ -1046,6 +1085,10 @@ p:last-of-type {
 .bg-blue-100 {
 	--tw-bg-opacity: 1;
 	background-color: rgba(219, 234, 254, var(--tw-bg-opacity));
+}
+.bg-green-300 {
+	--tw-bg-opacity: 1;
+	background-color: rgba(110, 231, 183, var(--tw-bg-opacity));
 }
 .bg-gradient-to-b {
 	background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
@@ -1214,6 +1257,10 @@ p:last-of-type {
 }
 .shadow-sm {
 	--tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-lg {
+	--tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .filter {

@@ -310,6 +310,48 @@ function tutCount($id) {
   
 }
 
+function getMeta($id) {
+  // Количество отзывов
+  $meta_rating_count = 'rating_count_'.$id;
+  $random_rating_count = mt_rand(5, 30);
+  if ( ! metadata_exists( 'post', $id, $meta_rating_count ) ) {
+    add_post_meta( $id, $meta_rating_count, $random_rating_count, true);
+  }
+
+  // Чистота отеля
+  $meta_rating_clean = 'rating_clean_'.$id;
+  $random_rating_clean = mt_rand(0, 99);
+  $value_rating_clean = '4.'.$random_rating_clean;
+  if ( ! metadata_exists( 'post', $id, $meta_rating_clean ) ) {
+    add_post_meta( $id, $meta_rating_clean, $value_rating_clean, true);
+  }
+
+  // Территория отеля
+  $meta_rating_territoria = 'rating_territoria_'.$id;
+  $random_rating_territoria = mt_rand(0, 99);
+  $value_rating_territoria = '4.'.$random_rating_territoria;
+  if ( ! metadata_exists( 'post', $id, $meta_rating_territoria ) ) {
+    add_post_meta( $id, $meta_rating_territoria, $value_rating_territoria, true);
+  }
+
+  // Персонал отеля
+  $meta_rating_personal = 'rating_personal_'.$id;
+  $random_rating_personal = mt_rand(0, 99);
+  $value_rating_personal = '4.'.$random_rating_personal;
+  if ( ! metadata_exists( 'post', $id, $meta_rating_personal ) ) {
+    add_post_meta( $id, $meta_rating_personal, $value_rating_personal, true);
+  }
+
+  // Стоимость отеля
+  $meta_rating_price = 'rating_price_'.$id;
+  $random_rating_price = mt_rand(0, 99);
+  $value_rating_price = '4.'.$random_rating_price;
+  if ( ! metadata_exists( 'post', $id, $meta_rating_price ) ) {
+    add_post_meta( $id, $meta_rating_price, $value_rating_price, true);
+  }
+  
+}
+
 function get_page_url($template_name) {
   $pages = get_posts([
     'post_type' => 'page',
