@@ -356,8 +356,8 @@
                       <div class="rating-row relative font-semibold">
                         <div class="flex items-center justify-center text-center">
                           <div class="relative z-1" style="width:<?php echo $rating_value_width; ?>%">
-                            <span xitemprop="ratingValue"><?php echo $rating_value ?> /</span>
-                            <?php _e('Оценок', 'odessa'); ?>: <span xitemprop="reviewCount"><?php echo get_post_meta( $current_id, $meta_rating_count, true ); ?></span>  
+                            <span xitemprop="ratingValue"><?php echo $rating_value ?>/5 - </span> (
+                            <?php _e('Оценок', 'odessa'); ?>: <span xitemprop="reviewCount"><?php echo get_post_meta( $current_id, $meta_rating_count, true ); ?></span>)
                           </div>
                           <div class="h-full absolute left-0 top-0 bg-green-300 rounded-xl text-center py-2" style="width:<?php echo $rating_value_width; ?>%"></div>
                         </div>
