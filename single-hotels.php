@@ -9,9 +9,9 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
   <main id="primary" class="page-padding">
-    <div class="container">
+    <div class="container" itemscope itemtype="https://schema.org/Hotel">
       <div class="mb-12">
-        <div class="text-3xl lg:text-4xl font-bold mb-4">
+        <div class="text-3xl lg:text-4xl font-bold mb-4" itemprop="name">
           <?php the_title(); ?>  
         </div>
         <!-- Хлебные крошки -->
@@ -65,15 +65,21 @@
           <!-- Описание -->
           <div class="mb-6">
             <div class="text-2xl font-semibold mb-4"><?php _e('Описание', 'odessa'); ?></div>
-            <div class="text-sm"><?php the_content(); ?></div>
+            <div class="text-sm" itemprop="description"><?php the_content(); ?></div>
           </div>
           <!-- END Описание -->
           <!-- Контакты -->
           <div class="mb-6">
             <div class="text-2xl font-semibold mb-4"><?php _e('Контакты', 'odessa'); ?></div>
 
-            <div class="text-sm mb-2"><span class="font-semibold"><?php _e('Адрес', 'odessa'); ?>: </span><?php echo carbon_get_the_post_meta('crb_hotels_address'); ?></div>
-              <div class="text-sm mb-2"><span class="font-semibold"><?php _e('Телефоны', 'odessa'); ?>: </span><?php echo carbon_get_the_post_meta('crb_hotels_phones'); ?></div>
+            <div class="text-sm mb-2" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+              <span class="font-semibold"><?php _e('Адрес', 'odessa'); ?>: </span>
+              <span itemprop="streetAddress"><?php echo carbon_get_the_post_meta('crb_hotels_address'); ?></span>
+            </div>
+              <div class="text-sm mb-2">
+                <span class="font-semibold" ><?php _e('Телефоны', 'odessa'); ?>: </span>
+                <span itemprop="telephone"><?php echo carbon_get_the_post_meta('crb_hotels_phones'); ?></span>
+              </div>
           </div>
           <!-- END Контакты -->
           <!-- Удобства -->
