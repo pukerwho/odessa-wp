@@ -208,6 +208,18 @@ html.lb-disable-scrolling {
       color: #ffffff;
       background: #1f2937; }
 
+.header .sub-menu {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 19px 38px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 19px 38px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; }
+
+.header .menu-item-has-children:hover > .sub-menu {
+  display: block;
+  z-index: 2; }
+
 .hamburger-toggle span {
   -webkit-transition: all 0.25s;
   -o-transition: all 0.25s;
