@@ -10,7 +10,7 @@
  */
 
 $current_title = wp_get_document_title();
-if ( is_singular( 'places' ) ) {
+if ( is_singular( 'hotels' ) ) {
 	//Название заведения
 	$place_title = get_the_title();
 	//Город
